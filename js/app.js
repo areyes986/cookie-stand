@@ -1,12 +1,20 @@
 'use strict';
 
 //store the html point of contact
+<<<<<<< HEAD
 var seattleElement = document.getElementById('seattle');
 
 
 // var hEl = document.createElement('h1'); //create element
 // hEl.textContent = 'Seattle' //give element content
 // cookieElement.appendChild(hEl); //append to DOM
+=======
+var cookieElement = document.getElementById('salmon-cookies');
+
+var hEl = document.createElement('h1'); //create element
+hEl.textContent = 'Seattle' //give element content
+cookieElement.appendChild(hEl); //append to DOM
+>>>>>>> e035f37d6d51f5ff1eec5e01d144a3dad124da11
 
 var hours = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ', '6pm: ', '7pm: ', '8pm: '];
 
@@ -34,7 +42,11 @@ var seattle = {
     for( var i = 0; i < hours.length; i++ ) {
       var liEl = document.createElement('li'); //create element
       liEl.textContent = `${hours[i]} ${this.average()} cookies`; //give element content
+<<<<<<< HEAD
       seattleElement.appendChild(liEl); //append to DOM
+=======
+      cookieElement.appendChild(liEl); //append to DOM
+>>>>>>> e035f37d6d51f5ff1eec5e01d144a3dad124da11
     }
   },
 };
@@ -42,7 +54,13 @@ var seattle = {
 seattle.render();
 
 // Tokyo Shop
+<<<<<<< HEAD
 var tokyoElement = document.getElementById('tokyo');
+=======
+var hEl = document.createElement('h1'); //create element
+hEl.textContent = 'Tokyo' //give element content
+cookieElement.appendChild(hEl); //append to DOM
+>>>>>>> e035f37d6d51f5ff1eec5e01d144a3dad124da11
 
 var tokyo = {
   minCustomersEachHour: 3,
@@ -66,7 +84,11 @@ var tokyo = {
     for( var i = 0; i < hours.length; i++ ) {
       var liEl = document.createElement('li'); //create element
       liEl.textContent = `${hours[i]} ${this.average()} cookies`; //give element content
+<<<<<<< HEAD
       tokyoElement.appendChild(liEl); //append to DOM
+=======
+      cookieElement.appendChild(liEl); //append to DOM
+>>>>>>> e035f37d6d51f5ff1eec5e01d144a3dad124da11
     }
   },
 };
@@ -74,7 +96,13 @@ var tokyo = {
 tokyo.render();
 
 //Dubai Shop
+<<<<<<< HEAD
 var dubaiElement = document.getElementById('dubai');
+=======
+var hEl = document.createElement('h1'); //create element
+hEl.textContent = 'Dubai' //give element content
+cookieElement.appendChild(hEl); //append to DOM
+>>>>>>> e035f37d6d51f5ff1eec5e01d144a3dad124da11
 
 var dubai = {
   minCustomersEachHour: 11,
@@ -98,7 +126,11 @@ var dubai = {
     for( var i = 0; i < hours.length; i++ ) {
       var liEl = document.createElement('li'); //create element
       liEl.textContent = `${hours[i]} ${this.average()} cookies`; //give element content
+<<<<<<< HEAD
       dubaiElement.appendChild(liEl); //append to DOM
+=======
+      cookieElement.appendChild(liEl); //append to DOM
+>>>>>>> e035f37d6d51f5ff1eec5e01d144a3dad124da11
     }
   },
 };
@@ -106,7 +138,13 @@ var dubai = {
 dubai.render();
 
 //Paris Shop
+<<<<<<< HEAD
 var parisElement = document.getElementById('paris');
+=======
+var hEl = document.createElement('h1'); //create element
+hEl.textContent = 'Paris' //give element content
+cookieElement.appendChild(hEl); //append to DOM
+>>>>>>> e035f37d6d51f5ff1eec5e01d144a3dad124da11
 
 var paris = {
   minCustomersEachHour: 20,
@@ -130,7 +168,11 @@ var paris = {
     for( var i = 0; i < hours.length; i++ ) {
       var liEl = document.createElement('li'); //create element
       liEl.textContent = `${hours[i]} ${this.average()} cookies`; //give element content
+<<<<<<< HEAD
       parisElement.appendChild(liEl); //append to DOM
+=======
+      cookieElement.appendChild(liEl); //append to DOM
+>>>>>>> e035f37d6d51f5ff1eec5e01d144a3dad124da11
     }
   },
 };
@@ -139,7 +181,13 @@ paris.render();
 
 
 //Lima Shop
+<<<<<<< HEAD
 var limaElement = document.getElementById('lima');
+=======
+var hEl = document.createElement('h1'); //create element
+hEl.textContent = 'Lima' //give element content
+cookieElement.appendChild(hEl); //append to DOM
+>>>>>>> e035f37d6d51f5ff1eec5e01d144a3dad124da11
 
 var lima = {
   minCustomersEachHour: 2,
@@ -163,7 +211,11 @@ var lima = {
     for( var i = 0; i < hours.length; i++ ) {
       var liEl = document.createElement('li'); //create element
       liEl.textContent = `${hours[i]} ${this.average()} cookies`; //give element content
+<<<<<<< HEAD
       limaElement.appendChild(liEl); //append to DOM
+=======
+      cookieElement.appendChild(liEl); //append to DOM
+>>>>>>> e035f37d6d51f5ff1eec5e01d144a3dad124da11
     }
   },
 };
