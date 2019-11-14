@@ -4,7 +4,7 @@
 
 var cookieElement = document.getElementById('salmonCookies');
 
-var hours = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ','5pm: ', '6pm: ', '7pm: '];
+var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm','5pm', '6pm', '7pm'];
 
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -49,10 +49,10 @@ Shops.prototype.render = function(){
   var ulEl = document.createElement('ul');
   for (var i = 0; i < hours.length; i++){
     var liEl = document.createElement('li');
-    liEl.textContent = `${hours[i]} ${this.cookiesEachHour[i]} cookies`;
+    liEl.textContent = `${hours[i]}: ${this.cookiesEachHour[i]} cookies`;
     ulEl.appendChild(liEl);
   }
-  liEl = document.createElement('li')
+  liEl = document.createElement('li');
   liEl.textContent = `Total: ${this.totalCookiesForTheDay} cookies`;
   ulEl.appendChild(liEl);
   cookieElement.appendChild(ulEl);
@@ -71,3 +71,77 @@ limaShop.render();
 
 
 //////////////////////Table Code///////////////////////////
+
+var table = document.getElementById('salmonCookies');
+
+
+
+var tbodyEl = document.createElement('tbody');
+var thEl = document.createElement('th');
+var thEl = document.createElement('th');
+var tdEl = document.createElement('td');
+var trEl = document.createElement('tr');
+
+
+
+function makeTr(){
+  trEl = document.createElement('tr');
+  for (var i = 0; i < hours.length; i++){
+    thEl = document.createElement('th');
+    thEl.textContent = hours[i]
+    trEl.appendChild(thEl);
+    tbodyEl.appendChild(trEl);
+    table.appendChild(tbodyEl);
+  }
+}
+makeTr();
+
+function makeTr2(){
+  trEl = document.createElement('tr');
+  thEl = document.createElement('th');
+  thEl.textContent = 'Seattle'
+  trEl.appendChild(thEl);
+  tbodyEl.appendChild(trEl); 
+  table.appendChild(tbodyEl); 
+  for (var i = 0; i < hours.length; i++){
+    thEl.textContent = hours[i]
+    trEl.appendChild(thEl);
+    tbodyEl.appendChild(trEl);
+    table.appendChild(tbodyEl);
+  }
+}
+makeTh2();
+
+
+// thEl = document.createElement('th');
+// thEl.textContent = 'column 1';
+// trEl.appendChild(thEl);
+// tbodyEl.appendChild(trEl);
+
+// thEl = document.createElement('th');
+// thEl.textContent = 'column 1';
+// trEl.appendChild(thEl);
+// tbodyEl.appendChild(trEl);
+
+// thEl = document.createElement('th');
+// thEl.textContent = 'column 1';
+// trEl.appendChild(thEl);
+// tbodyEl.appendChild(trEl);
+
+// thEl = document.createElement('th');
+// thEl.textContent = 'column 1';
+// trEl.appendChild(thEl);
+// tbodyEl.appendChild(trEl);
+
+// thEl = document.createElement('th');
+// thEl.textContent = 'column 1';
+// trEl.appendChild(thEl);
+// tbodyEl.appendChild(trEl);
+
+// table.appendChild(tbodyEl);
+
+// trEl = document.createElement('tr');
+// thEl = document.createElement('th');
+// thEl.textContent = 'column 1';
+// trEl.appendChild(thEl);
+// tbodyEl.appendChild(trEl);
