@@ -88,7 +88,7 @@ function makeTr(){
   trEl = document.createElement('tr');
   for (var i = 0; i < hours.length; i++){
     thEl = document.createElement('th');
-    thEl.textContent = hours[i]
+    thEl.textContent = hours[i];
     trEl.appendChild(thEl);
     tbodyEl.appendChild(trEl);
     table.appendChild(tbodyEl);
@@ -96,21 +96,24 @@ function makeTr(){
 }
 makeTr();
 
-function makeTr2(){
+function makeTh2(){
   trEl = document.createElement('tr');
   thEl = document.createElement('th');
   thEl.textContent = 'Seattle'
   trEl.appendChild(thEl);
-  tbodyEl.appendChild(trEl); 
-  table.appendChild(tbodyEl); 
+  tbodyEl.appendChild(trEl);
+  table.appendChild(tbodyEl);
   for (var i = 0; i < hours.length; i++){
-    thEl.textContent = hours[i]
+    tdEl = document.createElement('td');
+    tdEl.textContent = 'test';
+    trEl.appendChild(tdEl);
     trEl.appendChild(thEl);
     tbodyEl.appendChild(trEl);
     table.appendChild(tbodyEl);
   }
 }
 makeTh2();
+
 
 
 // thEl = document.createElement('th');
