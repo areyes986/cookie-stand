@@ -7,7 +7,7 @@ var cookieElement = document.getElementById('salmonCookies');
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm','5pm', '6pm', '7pm'];
 
 function randomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.ceil(Math.random() * (max - min)) + min;
 }
 
 //////////Constructor for shops/////////////
@@ -75,32 +75,31 @@ var limaShop = new Shops('Lima Shop', 2, 16, 4.6);
 
 var table = document.getElementById('salmonCookies');
 
-
-
 var tbodyEl = document.createElement('tbody');
 var thEl = document.createElement('th');
 var tdEl = document.createElement('td');
 var trEl = document.createElement('tr');
 
 
-
-function makeTr(){
+function makeTr1(){
   trEl = document.createElement('tr');
-  thEl = document.createElement('th')
+  thEl = document.createElement('th');
   thEl.textContent = '';
-  trEl.appendChild(thEl)
+  trEl.appendChild(thEl);
+//hours to table
   for (var i = 0; i < hours.length; i++){
     thEl = document.createElement('th');
     thEl.textContent = hours[i];
     trEl.appendChild(thEl);
   }
+//Total to table
   thEl = document.createElement('th');
   thEl.textContent = 'Daily Total Location';
   trEl.appendChild(thEl);
   tbodyEl.appendChild(trEl);
   table.appendChild(tbodyEl);
 }
-makeTr();
+makeTr1();
 
 Shops.prototype.makeTh2 = function makeTh2(){
   this.calcCustomerEachHour();
@@ -127,8 +126,9 @@ function makeFooter(){
   thEl.textContent = 'Total';
   tbodyEl.appendChild(thEl);
   table.appendChild(tbodyEl);
-  
-}
+
+};
+
 
 
 
@@ -138,5 +138,11 @@ dubaiShop.makeTh2();
 parisShop.makeTh2();
 limaShop.makeTh2();
 makeFooter();
+
+
+
+
+
+
 
 
