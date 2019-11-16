@@ -78,7 +78,6 @@ var table = document.getElementById('salmonCookies');
 
 var tbodyEl = document.createElement('tbody');
 var thEl = document.createElement('th');
-var thEl = document.createElement('th');
 var tdEl = document.createElement('td');
 var trEl = document.createElement('tr');
 
@@ -86,13 +85,16 @@ var trEl = document.createElement('tr');
 
 function makeTr(){
   trEl = document.createElement('tr');
+  thEl = document.createElement('th')
+  thEl.textContent = '';
+  trEl.appendChild(thEl)
   for (var i = 0; i < hours.length; i++){
     thEl = document.createElement('th');
     thEl.textContent = hours[i];
     trEl.appendChild(thEl);
-    tbodyEl.appendChild(trEl);
-    table.appendChild(tbodyEl);
   }
+  tbodyEl.appendChild(trEl);
+  table.appendChild(tbodyEl);
 }
 makeTr();
 
@@ -103,7 +105,7 @@ Shops.prototype.makeTh2 = function makeTh2(){
   trEl.appendChild(thEl);
   for (var i = 0; i < hours.length; i++){
     tdEl = document.createElement('td');
-    tdEl.textContent = ``
+    tdEl.textContent = 'test';
     trEl.appendChild(tdEl);
   }
   tbodyEl.appendChild(trEl);
@@ -115,7 +117,6 @@ tokyoShop.makeTh2();
 dubaiShop.makeTh2();
 parisShop.makeTh2();
 limaShop.makeTh2();
-
 
 
 // thEl = document.createElement('th');
