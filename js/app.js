@@ -129,9 +129,6 @@ function makeFooter(){
 
 };
 
-
-
-
 seattleShop.makeTh2();
 tokyoShop.makeTh2();
 dubaiShop.makeTh2();
@@ -139,10 +136,30 @@ parisShop.makeTh2();
 limaShop.makeTh2();
 makeFooter();
 
+///////////Forms and Events/////////////
 
 
+var userForm = document.getElementById('user-form');
+userForm.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event){
+  event.preventDefault();
+
+  var shopName = event.target.inputShopname.value;
+  var minCust = event.target.inputMinimumCustomers.value;
+  var maxCust = event.target.inputMaximumCustomers.value;
+  var avgCookieSale = event.target.inputAveCookieSale.value;
+
+  
+
+  // event.target.inputElementName.value = null;
+
+  console.log(shopName);
+  console.log(minCust);
+  console.log(maxCust);
+  console.log(avgCookieSale);
 
 
-
+}
 
 

@@ -1,0 +1,22 @@
+body {
+    background-color:white;
+}
+
+
+/* ///////Form Style///////// */
+.formStyle {
+    line-break: normal;
+
+}
+
+label {
+    display:block;
+    padding: 5px;
+}
+
+button {
+    font-family: monospace;
+    border-style: outset;
+    background-color: darkblue;
+    color: white;
+}
