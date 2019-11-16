@@ -59,15 +59,15 @@ Shops.prototype.render = function(){
 };
 
 var seattleShop = new Shops('Seattle Shop', 23, 65, 6.3);
-seattleShop.render();
+// seattleShop.render();
 var tokyoShop = new Shops('Tokyo Shop', 3, 24, 1.2);
-tokyoShop.render();
+// tokyoShop.render();
 var dubaiShop = new Shops('Dubai Shop', 11, 38, 3.7);
-dubaiShop.render();
+// dubaiShop.render();
 var parisShop = new Shops('Paris Shop', 20, 38, 2.3);
-parisShop.render();
+// parisShop.render();
 var limaShop = new Shops('Lima Shop', 2, 16, 4.6);
-limaShop.render();
+// limaShop.render();
 
 
 //////////////////////Table Code///////////////////////////
@@ -78,7 +78,6 @@ var table = document.getElementById('salmonCookies');
 
 var tbodyEl = document.createElement('tbody');
 var thEl = document.createElement('th');
-var thEl = document.createElement('th');
 var tdEl = document.createElement('td');
 var trEl = document.createElement('tr');
 
@@ -86,34 +85,38 @@ var trEl = document.createElement('tr');
 
 function makeTr(){
   trEl = document.createElement('tr');
+  thEl = document.createElement('th')
+  thEl.textContent = '';
+  trEl.appendChild(thEl)
   for (var i = 0; i < hours.length; i++){
     thEl = document.createElement('th');
     thEl.textContent = hours[i];
     trEl.appendChild(thEl);
-    tbodyEl.appendChild(trEl);
-    table.appendChild(tbodyEl);
   }
+  tbodyEl.appendChild(trEl);
+  table.appendChild(tbodyEl);
 }
 makeTr();
 
-function makeTh2(){
+Shops.prototype.makeTh2 = function makeTh2(){
   trEl = document.createElement('tr');
   thEl = document.createElement('th');
-  thEl.textContent = 'Seattle'
+  thEl.textContent = `${this.name}`;
   trEl.appendChild(thEl);
-  tbodyEl.appendChild(trEl);
-  table.appendChild(tbodyEl);
   for (var i = 0; i < hours.length; i++){
     tdEl = document.createElement('td');
     tdEl.textContent = 'test';
     trEl.appendChild(tdEl);
-    trEl.appendChild(thEl);
-    tbodyEl.appendChild(trEl);
-    table.appendChild(tbodyEl);
   }
+  tbodyEl.appendChild(trEl);
+  table.appendChild(tbodyEl);
 }
-makeTh2();
 
+seattleShop.makeTh2();
+tokyoShop.makeTh2();
+dubaiShop.makeTh2();
+parisShop.makeTh2();
+limaShop.makeTh2();
 
 
 // thEl = document.createElement('th');
