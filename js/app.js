@@ -28,7 +28,8 @@ function Shops (name, minCustomersEachHour, maxCustomersEachHour, averageCookies
 
 Shops.prototype.calcCustomerEachHour = function(){
   for (var i = 0; i < hours.length; i++) {
-    this.customersEachHour.push(randomNumber(23,65));
+    var calc = randomNumber(this.minCustomersEachHour,this.maxCustomersEachHour);
+    this.customersEachHour.push(calc);
   }
 };
 
@@ -93,61 +94,49 @@ function makeTr(){
     thEl.textContent = hours[i];
     trEl.appendChild(thEl);
   }
+  thEl = document.createElement('th');
+  thEl.textContent = 'Daily Total Location';
+  trEl.appendChild(thEl);
   tbodyEl.appendChild(trEl);
   table.appendChild(tbodyEl);
 }
 makeTr();
 
 Shops.prototype.makeTh2 = function makeTh2(){
+  this.calcCustomerEachHour();
+  this.calcCookieEachHour();
   trEl = document.createElement('tr');
   thEl = document.createElement('th');
-  thEl.textContent = `${this.name}`;
+  thEl.textContent = this.name;
   trEl.appendChild(thEl);
   for (var i = 0; i < hours.length; i++){
     tdEl = document.createElement('td');
-    tdEl.textContent = 'test';
+    tdEl.textContent = this.cookiesEachHour[i];
     trEl.appendChild(tdEl);
   }
+  tdEl = document.createElement('td');
+  tdEl.textContent = this.totalCookiesForTheDay;
+  trEl.appendChild(tdEl);
   tbodyEl.appendChild(trEl);
   table.appendChild(tbodyEl);
+};
+
+function makeFooter(){
+  trEl = document.createElement('tr');
+  thEl = document.createElement('th');
+  thEl.textContent = 'Total';
+  tbodyEl.appendChild(thEl);
+  table.appendChild(tbodyEl);
+  
 }
+
+
 
 seattleShop.makeTh2();
 tokyoShop.makeTh2();
 dubaiShop.makeTh2();
 parisShop.makeTh2();
 limaShop.makeTh2();
+makeFooter();
 
 
-// thEl = document.createElement('th');
-// thEl.textContent = 'column 1';
-// trEl.appendChild(thEl);
-// tbodyEl.appendChild(trEl);
-
-// thEl = document.createElement('th');
-// thEl.textContent = 'column 1';
-// trEl.appendChild(thEl);
-// tbodyEl.appendChild(trEl);
-
-// thEl = document.createElement('th');
-// thEl.textContent = 'column 1';
-// trEl.appendChild(thEl);
-// tbodyEl.appendChild(trEl);
-
-// thEl = document.createElement('th');
-// thEl.textContent = 'column 1';
-// trEl.appendChild(thEl);
-// tbodyEl.appendChild(trEl);
-
-// thEl = document.createElement('th');
-// thEl.textContent = 'column 1';
-// trEl.appendChild(thEl);
-// tbodyEl.appendChild(trEl);
-
-// table.appendChild(tbodyEl);
-
-// trEl = document.createElement('tr');
-// thEl = document.createElement('th');
-// thEl.textContent = 'column 1';
-// trEl.appendChild(thEl);
-// tbodyEl.appendChild(trEl);
