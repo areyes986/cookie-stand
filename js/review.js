@@ -101,7 +101,7 @@ var renderFooterRow = function(){
     var td = document.createElement('td');
 
     for ( var j = 0; j < CookieShop.allStores.length; j++){
-      storesHourlyTotals += CookieShop.allStores[j].hourlyCookiesTotal[i];
+      storesHourlyTotals += CookieShop.allStores[j].hourlyCookiesTotal[j];
     }
     td. textContent = storesHourlyTotals;
     trEl.appendChild(td);

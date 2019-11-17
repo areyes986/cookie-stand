@@ -24,6 +24,10 @@ function Shops (name, minCustomersEachHour, maxCustomersEachHour, averageCookies
   this.totalCookiesForTheDay = 0;
 
   allShops.push(this);
+
+  this.calcCustomerEachHour();
+  this.calcCookieEachHour();
+  this.makeTh2();
 }
 
 Shops.prototype.calcCustomerEachHour = function(){
@@ -59,16 +63,17 @@ Shops.prototype.render = function(){
   cookieElement.appendChild(ulEl);
 };
 
-var seattleShop = new Shops('Seattle Shop', 23, 65, 6.3);
-// seattleShop.render();
-var tokyoShop = new Shops('Tokyo Shop', 3, 24, 1.2);
-// tokyoShop.render();
-var dubaiShop = new Shops('Dubai Shop', 11, 38, 3.7);
-// dubaiShop.render();
-var parisShop = new Shops('Paris Shop', 20, 38, 2.3);
-// parisShop.render();
-var limaShop = new Shops('Lima Shop', 2, 16, 4.6);
+// var seattleShop = new Shops('Seattle Shop', 23, 65, 6.3);
+// // seattleShop.render();
+// var tokyoShop = new Shops('Tokyo Shop', 3, 24, 1.2);
+// // tokyoShop.render();
+// var dubaiShop = new Shops('Dubai Shop', 11, 38, 3.7);
+// // dubaiShop.render();
+// var parisShop = new Shops('Paris Shop', 20, 38, 2.3);
+// // parisShop.render();
+// var limaShop = new Shops('Lima Shop', 2, 16, 4.6);
 // limaShop.render();
+
 
 
 //////////////////////Table Code///////////////////////////
@@ -86,13 +91,13 @@ function makeTr1(){
   thEl = document.createElement('th');
   thEl.textContent = '';
   trEl.appendChild(thEl);
-//hours to table
+  //hours to table
   for (var i = 0; i < hours.length; i++){
     thEl = document.createElement('th');
     thEl.textContent = hours[i];
     trEl.appendChild(thEl);
   }
-//Total to table
+  //Total to table
   thEl = document.createElement('th');
   thEl.textContent = 'Daily Total Location';
   trEl.appendChild(thEl);
@@ -120,24 +125,38 @@ Shops.prototype.makeTh2 = function makeTh2(){
   table.appendChild(tbodyEl);
 };
 
-function makeFooter(){
-  trEl = document.createElement('tr');
-  thEl = document.createElement('th');
-  thEl.textContent = 'Total';
-  tbodyEl.appendChild(thEl);
-  table.appendChild(tbodyEl);
+// function makeFooter(){
+//   trEl = document.createElement('tr');
+//   thEl = document.createElement('th');
+//   thEl.textContent = 'Total';
+//   tbodyEl.appendChild(thEl);
 
-};
+//   for(var i = 0; i < hours.length;i++){
+//     var storesHourlyTotals = 0;
+//     tdEl = document.createElement('td');
 
-seattleShop.makeTh2();
-tokyoShop.makeTh2();
-dubaiShop.makeTh2();
-parisShop.makeTh2();
-limaShop.makeTh2();
-makeFooter();
+//     for (var j = 0; j < Shops.allShops.length; j++){
+//       storesHourlyTotals += Shops.allShops[j].cookiesEachHour[j];
+//     }
+//     tdEl.textContent = storesHourlyTotals;
+//     trEl.appendChild(tdEl);
+//   }
+//   tdEl = document.createElement('td');
+//   tdEl. textContent = Shops.totalCookiesForTheDay;
+//   trEl.appendChild(tdEl);
+//   tbodyEl.appendChild(trEl);
+//   table.appendChild(tbodyEl);
+// }
+
+// seattleShop.makeTh2();
+// tokyoShop.makeTh2();
+// dubaiShop.makeTh2();
+// parisShop.makeTh2();
+// limaShop.makeTh2();
+
+// makeFooter();
 
 ///////////Forms and Events/////////////
-
 
 var userForm = document.getElementById('user-form');
 userForm.addEventListener('submit', handleSubmit);
@@ -146,20 +165,23 @@ function handleSubmit(event){
   event.preventDefault();
 
   var shopName = event.target.inputShopname.value;
-  var minCust = event.target.inputMinimumCustomers.value;
-  var maxCust = event.target.inputMaximumCustomers.value;
-  var avgCookieSale = event.target.inputAveCookieSale.value;
-
-  
-
-  // event.target.inputElementName.value = null;
-
-  console.log(shopName);
-  console.log(minCust);
-  console.log(maxCust);
-  console.log(avgCookieSale);
+  var minCust = parseInt(event.target.inputMinimumCustomers.value);
+  var maxCust = parseInt(event.target.inputMaximumCustomers.value);
+  var avgCookieSale = parseInt(event.target.inputAveCookieSale.value);
 
 
+  // event.target.inputShopname.value = null;
+  // event.target.nputMinimumCustomers.value = null;
+  // event.target.inputMaximumCustomers.value = null;
+  // event.target.inputAveCookieSale.value = null;
+
+  new Shops(shopName, minCust , maxCust, avgCookieSale);
+  console.log(allShops);
+  // console.log(shopName);
+  // console.log(minCust);
+  // console.log(maxCust);
+  // console.log(avgCookieSale);
 }
+
 
 
