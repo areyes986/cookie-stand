@@ -1,0 +1,26 @@
+body {
+    background-color:white;
+}
+
+/* ///////////Table Se/////////// */
+
+table {
+    border:solid black;
+}
+/* ///////Form Style///////// */
+.formStyle {
+    line-break: normal;
+
+}
+
+label {
+    display:block;
+    padding: 5px;
+}
+
+button {
+    font-family: monospace;
+    border-style: outset;
+    background-color: darkblue;
+    color: white;
+}
