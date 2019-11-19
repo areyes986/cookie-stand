@@ -1,16 +1,39 @@
 body {
-    background-color:white;
+    background-color: #fffafa;
 }
 
+h1 {
+    font-family: 'Rammetto One', cursive;
+    font-size: 20px;
+}
+
+div {
+    
+}
 /* ///////////Table Se/////////// */
 
 table {
-    border:solid black;
+    border: double black 1px;
+    border-radius: 10px;
+    padding: 15px;
 }
+
 /* ///////Form Style///////// */
+
+form {
+    display:block;
+    
+    
+}
+
 .formStyle {
     line-break: normal;
-
+    border:solid black 1px;
+    border-radius: 10px;
+    float: inherit;
+    margin-right: 1200px;
+    padding-left: 10px;
+    
 }
 
 label {
