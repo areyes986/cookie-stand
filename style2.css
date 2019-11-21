@@ -1,0 +1,25 @@
+/* ///////////// Header ///////////// */
+body {
+    background-color: #fffafa;
+}
+header > figure {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Rammetto One', cursive;
+    text-align: center;
+}
+
+header > nav {
+    text-align: center;
+    background-color: #ffe0e0;
+
+   
+}
+
+header > nav > div {
+    font-family: 'Rammetto One', cursive;
+    display: inline-block;
+    margin: 30px;
+}

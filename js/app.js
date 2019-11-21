@@ -154,12 +154,12 @@ function handleSubmit(event){
   var maxCust = parseInt(event.target.inputMaximumCustomers.value);
   var avgCookieSale = parseInt(event.target.inputAveCookieSale.value);
 
-
-  // event.target.inputShopname.value = null;
-  // event.target.nputMinimumCustomers.value = null;
-  // event.target.inputMaximumCustomers.value = null;
-  // event.target.inputAveCookieSale.value = null;
-
+  
+  event.target.inputShopname.value = null;
+  event.target.inputMinimumCustomers.value = null;
+  event.target.inputMaximumCustomers.value = null;
+  event.target.inputAveCookieSale.value = null;
+  
   new Shops(shopName, minCust , maxCust, avgCookieSale);
   makeTr1();
   for(var i = 0; i < allShops.length; i++){
