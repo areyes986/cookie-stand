@@ -1,10 +1,8 @@
 /* ///////////// Header ///////////// */
 body {
-    background-color: #fffafa;
+    background-color: #fffdf9;
 }
-header > figure {
-    text-align: center;
-}
+
 
 h1 {
     font-family: 'Rammetto One', cursive;
@@ -12,14 +10,38 @@ h1 {
 }
 
 header > nav {
+    width: 100%;
     text-align: center;
     background-color: #ffe0e0;
-
-   
+    position: fixed;
+    margin-top: -16px;
+    
 }
 
-header > nav > div {
+header > nav > a {
     font-family: 'Rammetto One', cursive;
     display: inline-block;
-    margin: 30px;
+    margin: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+   
+    
+}
+
+header > figure {
+    text-align: center;
+    padding-top: 100px;
+         
+}
+
+
+/* ///////////////main/////////////////// */
+
+main > h2 {
+    font-family: 'Rammetto One', cursive;
+    text-align: center;
+}
+
+li {
+    list-style: none;
 }
