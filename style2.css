@@ -10,6 +10,7 @@ h1 {
 }
 
 header > nav {
+    height: 6%;
     width: 100%;
     text-align: center;
     background-color: #beebe9;
@@ -23,6 +24,7 @@ header > nav > a {
     font-family: 'Rammetto One', cursive;
     display: inline-block;
     margin: 20px;
+    margin-top: 8px;
     margin-left: 60px;
     margin-right: 60px;
    
@@ -37,8 +39,13 @@ header > figure {
 
 
 /* ///////////////main/////////////////// */
+main {
+    text-align: center;
+}
 
 main > h2 {
+    padding-top: 50px;
+    margin-top: -50px;
     font-family: 'Rammetto One', cursive;
     text-align: center;
 }
@@ -47,6 +54,22 @@ main > p {
     white-space: pre-line;
 }
 
-/* li {
-    list-style: none;
-} */
+#family {
+    text-align: center;
+    width: 400px;
+}
+
+
+.merch > article {
+    margin: 30px;
+    display: inline-block;
+
+}
+
+article:nth-child(1) {
+    border: 1px solid grey;
+    border-radius: 5px;;
+    width: 300px;
+    padding: 10px;
+}
+
