@@ -1,6 +1,7 @@
 /* ///////////// Header ///////////// */
 body {
     background-color: #fffdf9;
+   
 }
 
 
@@ -48,10 +49,8 @@ main > h2 {
     margin-top: -50px;
     font-family: 'Rammetto One', cursive;
     text-align: center;
-}
+    margin: 40px;
 
-main > p {
-    white-space: pre-line;
 }
 
 #family {
@@ -60,10 +59,23 @@ main > p {
 }
 
 
-.merch > article {
-    margin: 30px;
-    display: inline-block;
 
+#nav3 > article {
+    margin: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    
+
+
+}
+
+#nav3 > article > h3 {
+    font-size: medium;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+#nav3 > article > p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 article:nth-child(1) {
@@ -73,3 +85,23 @@ article:nth-child(1) {
     padding: 10px;
 }
 
+article:nth-child(2) {
+    border: 1px solid grey;
+    border-radius: 5px;;
+    width: 300px;
+    padding: 30px;
+}
+
+article:nth-child(3) {
+    border: 1px solid grey;
+    border-radius: 5px;;
+    width: 300px;
+    padding: 10px;
+}
+
+
+/* ///////////Footer/////////////// */
+
+p {
+    white-space: pre-line;
+}
