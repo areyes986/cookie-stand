@@ -45,7 +45,7 @@ Shops.prototype.calcCookieEachHour = function(){
     this.cookiesEachHour.push(cookies);
     this.totalCookiesForTheDay += this.cookiesEachHour[i];
     allTotal += cookies;
-    console.log(allTotal);
+    // console.log(allTotal);
   }
 };
 
@@ -150,16 +150,34 @@ function handleSubmit(event){
   event.preventDefault();
   document.getElementsByTagName('table')[0].innerHTML = '';
   var shopName = event.target.inputShopname.value;
-  var minCust = parseInt(event.target.inputMinimumCustomers.value);
+  var minCust = parseInt(event.target.inputMinimumCustomers.value) ;
   var maxCust = parseInt(event.target.inputMaximumCustomers.value);
   var avgCookieSale = parseInt(event.target.inputAveCookieSale.value);
 
-  
+  if (!shopName || !minCust || !maxCust || !avgCookieSale){
+    return alert('Please fill in all fields');
+  }
+
+  if (isNaN(minCust) || isNaN(maxCust) || isNaN(avgCookieSale)) {
+    event.target.inputMinimumCustomers.value = null;
+    event.target.inputMaximumCustomers.value = null;
+    event.target.inputAveCookieSale.value = null;
+    return alert('Please enter only intergers for the Min. Customers, Max. Customers, and average cookie sales fields.');
+  }
+
+  if (minCust < 0 || maxCust < 0 || avgCookieSale < 0){
+    return alert ('Please enter a value higher than 0');
+  }
+
+  if (minCust > maxCust) {
+    return alert ('Maximum Customers needs a value higher than Minimum Customers');
+  }
+
   event.target.inputShopname.value = null;
   event.target.inputMinimumCustomers.value = null;
   event.target.inputMaximumCustomers.value = null;
   event.target.inputAveCookieSale.value = null;
-  
+
   new Shops(shopName, minCust , maxCust, avgCookieSale);
   makeTr1();
   for(var i = 0; i < allShops.length; i++){

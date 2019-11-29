@@ -99,9 +99,19 @@ article:nth-child(3) {
     padding: 10px;
 }
 
+button {
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+
+}
 
 /* ///////////Footer/////////////// */
 
-p {
+footer > #nav4 {
+    margin: 40px;
+    font-family: 'Rammetto One', cursive;
+    text-align: center;
+}
+footer > p {
     white-space: pre-line;
 }
