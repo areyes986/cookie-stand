@@ -173,6 +173,7 @@ function handleSubmit(event){
     return alert ('Maximum Customers needs a value higher than Minimum Customers');
   }
 
+
   event.target.inputShopname.value = null;
   event.target.inputMinimumCustomers.value = null;
   event.target.inputMaximumCustomers.value = null;
