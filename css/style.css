@@ -1,5 +1,7 @@
 body {
     background-color: #fffafa;
+    text-align: center;
+
 }
 
 h1 {
@@ -7,30 +9,46 @@ h1 {
     font-size: 20px;
 }
 
+p {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
 /* ///////////Table Se/////////// */
 
 table {
+    
+    margin-top:100px;
+    display: inline-block;
     border: double black 1px;
     border-radius: 10px;
     padding: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+th {
+    background-color: #ade0f5 ;
+    margin:0px;
+}
+th, td {
+
+}
+
+
 
 /* ///////Form Style///////// */
 
-form {
-    display:block;
-    
-    
-}
 
 .formStyle {
+    background-color: #ade0f5 ;
+    width: 400px;
+    display: inline-block;
     line-break: normal;
     border:solid black 1px;
     border-radius: 10px;
-    float: inherit;
-    margin-right: 1200px;
     padding-left: 10px;
-    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 label {

@@ -1,12 +1,13 @@
 /* ///////////// Header ///////////// */
 body {
     width: 100%;
-    background-color: #fffdf9;
+    background-color: #f0dedf;
     margin: 0px;
 }
 
-
+/* //////google fonts/////// */
 h1 {
+    color: #394645;
     font-family: 'Rammetto One', cursive;
     text-align: center;
 }
@@ -15,9 +16,10 @@ header > nav {
     height: 6%;
     width: 100%;
     text-align: center;
-    background-color: #beebe9;
+    background-color: #ade0f5 ;
     position: fixed;
     margin-top: -16px;
+    border-radius: 10px;
 }
 
 
@@ -47,19 +49,18 @@ main {
 main > h2 {
     padding-top: 50px;
     margin-top: -50px;
+    color: #394645;
     font-family: 'Rammetto One', cursive;
     text-align: center;
     margin: 40px;
 }
 
-main > img {
-    border: 1px solid grey;
-    border-radius: 5px;
-}
 
 #family {
     text-align: center;
     width: 400px;
+    border-radius: 5px;
+    border: 2px black solid;
 }
 
 #nav3 > article {
@@ -67,35 +68,57 @@ main > img {
     display: inline-block;
     vertical-align: middle;
 }
-
+/* ///////sans-serif font////// */
 #nav3 > article > h3 {
+    color: darkslategrey;
     font-size: medium;
     font-family: Verdana, Tahoma, sans-serif;
 }
 
+/* //////// serif font//////// */
 #nav3 > article > p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 article:nth-child(1) {
+    color: midnightblue;
     border: 1px solid grey;
-    border-radius: 5px;;
+    border-radius: 5px;
     width: 300px;
     padding: 10px;
+}
+
+main > img{
+    border-radius: 5px;
+    border: solid black 2px;
 }
 
 article:nth-child(2) {
+    color: midnightblue;
     border: 1px solid grey;
-    border-radius: 5px;;
+    border-radius: 5px;
     width: 300px;
     padding: 30px;
+
 }
 
+
+article:nth-child(2) > img {
+    width: 280px;
+    border-radius: 5px;
+}
+
+
 article:nth-child(3) {
+    color: rgb(19, 19, 87);
     border: 1px solid grey;
     border-radius: 5px;;
     width: 300px;
     padding: 10px;
+}
+
+article:nth-child(3) > img {
+    border-radius: 5px;
 }
 
 button {
@@ -107,24 +130,37 @@ button {
 
 footer {
     width: 100%;
-    background-color:#beebe9 ;
+    background-color: #c3e2f0;
+}
+
+footer > h2 {
+    padding-top: 20px;
+}
+
+hr {
+border: dotted 5px #01968e;
+position: relative;
+z-index: 10px;
+border-bottom: none;
 }
 
 footer > #nav4 {
+    color: #394645;
     font-family: 'Rammetto One', cursive;
     text-align: center;
+    margin-top: -11px;
 }
 
 footer > section {
     text-align: center;
-
 }
 
 footer > section >p {
+    color: rgb(19, 19, 87);
     margin: 0px 30px;
     white-space: pre-line;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 }
 
