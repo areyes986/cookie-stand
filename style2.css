@@ -50,7 +50,11 @@ main > h2 {
     font-family: 'Rammetto One', cursive;
     text-align: center;
     margin: 40px;
+}
 
+main > img {
+    border: 1px solid grey;
+    border-radius: 5px;
 }
 
 #family {
@@ -58,15 +62,10 @@ main > h2 {
     width: 400px;
 }
 
-
-
 #nav3 > article {
     margin: 40px;
     display: inline-block;
     vertical-align: middle;
-    
-
-
 }
 
 #nav3 > article > h3 {
@@ -102,7 +101,6 @@ article:nth-child(3) {
 button {
     padding: 10px 20px 10px 20px;
     border-radius: 5px;
-
 }
 
 /* ///////////Footer/////////////// */
@@ -116,8 +114,20 @@ footer > #nav4 {
     font-family: 'Rammetto One', cursive;
     text-align: center;
 }
-footer > p {
+
+footer > section {
+    text-align: center;
+
+}
+
+footer > section >p {
+    margin: 0px 30px;
     white-space: pre-line;
-    width: 100%;
-    margin-bottom: 0px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+
+footer > section > p > img {
+    width: 50px;
 }
